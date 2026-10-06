@@ -12,6 +12,7 @@ Tested on: PHP 7.4.33 · Apache 2.4 (Debian) · MySQL 8.0.46 · also verified wi
 ## Layout
 
 - `reports/` — full reports (EN + 中文): root cause with file/line, payload constraints, request samples, verified output, PoC listing, impact, mitigation, references
+- `images/` — screenshots referenced by the reports, stored inside the repository so they render without depending on an external host
 - `poc/1.py` — report 1 PoC; the write phase needs a back-end session cookie and the random entry file name (e.g. `admin82b8542a912e.php`), the execution trigger it issues is anonymous
 - `poc/2.py` — report 2 PoC; same write-phase requirements, the dropped entry file is then anonymously reachable
 - `poc/3.py` — report 3 PoC, unauthenticated; auto-detects the DB driver and picks a working boolean oracle (length / UNION-error / CASE-error)
